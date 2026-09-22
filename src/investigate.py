@@ -1,5 +1,6 @@
 
 import csv
+import json
 def find_records(filename, mrn):
 	records = []
 	with open(filename, newline="") as file:
@@ -25,5 +26,5 @@ for filename in evidence_files:
     records = find_records(filename, "TWQ58321")
     evidence_package [filename] = records
 
-print(evidence_package)
+print(json.dumps(evidence_package, indent=2))
 
