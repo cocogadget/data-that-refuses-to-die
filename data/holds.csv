@@ -1,0 +1,2 @@
+hold_id,mrn,hold_status,hold_reason,scope,dashboard_indicator,evidence_note
+HOLD-15-001,TWQ58321,active,total_disability_application,behavioral_health_records,visible_lock,Synthetic clinic hold process; existence of hold does not itself establish a legal retention requirement.

@@ -1,0 +1,16 @@
+patient_no,patient_name,mrn,age,age_group,primary_diagnosis,primary_psychiatrist,case_type
+1,Quinn Navarro,QNV18426,16,Minor,Anxiety,Priya Vance,Control
+2,Riley Owens,ROW73158,14,Minor,ADHD,Omar Sutton,Control
+3,Sabrina Palmer,SPM46217,72,Elderly,Depression,Nadia Reynolds,Control
+4,Terrence Quinn,TQX80534,68,Elderly,Grief counseling,Omar Sutton,Control
+5,Ursula Rhodes,URK29641,76,Elderly,Generalized anxiety disorder,Priya Vance,Control
+6,Vanessa Sawyer,VSW51382,48,Middle-aged,Depression,Nadia Reynolds,Control
+7,Warren Taylor,WTL64029,53,Middle-aged,Anxiety,Omar Sutton,Control
+8,Xenia Underwood,XUN35714,45,Middle-aged,Mood disorder,Priya Vance,Control
+9,Yasmin Vega,YVG82163,27,Gen Z,Anxiety,Nadia Reynolds,Investigation
+10,Zane Wallace,ZWL47590,24,Gen Z,ADHD,Omar Sutton,Investigation
+11,Tessa West,TWE90316,29,Gen Z,Grief counseling,Priya Vance,Investigation
+12,Xavier Young,XYG26845,31,Adult,Depression,Nadia Reynolds,Investigation
+13,Yvette Zimmerman,YZM71432,43,Middle-aged,Anxiety,Omar Sutton,Investigation
+14,Tristan Yates,TYR63905,38,Adult,Depression,Priya Vance,Stubborn Record
+15,Talia Whitmore,TWQ58321,38,Adult,Generalized anxiety disorder,Nadia Reynolds,Sensitive Record

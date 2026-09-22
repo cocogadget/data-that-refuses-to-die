@@ -1,0 +1,16 @@
+claim_id,mrn,coverage_id,claim_subject,claim_date,claim_status,current_location,ground_truth_state,notes
+CLM-15-ESC-001,TWQ58321,BCNC-OLD-15,Escitalopram 10 mg,2025-03-20,paid_closed,enterprise_revenue_cycle,SURVIVES,historical claim from medication no longer current
+CLM-14-OWN-001,TYR63905,UHC-CUR-14,Behavioral health services,2025-11-01,paid_closed,enterprise_revenue_cycle,SURVIVES,patient own claim closed; separate guarantor dependency exists
+CLM-01-001,QNV18426,INS-01-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-02-001,ROW73158,INS-02-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-03-001,SPM46217,INS-03-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-04-001,TQX80534,INS-04-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-05-001,URK29641,INS-05-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-06-001,VSW51382,INS-06-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-07-001,WTL64029,INS-07-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-08-001,XUN35714,INS-08-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-09-001,YVG82163,INS-09-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-10-001,ZWL47590,INS-10-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-11-001,TWE90316,INS-11-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-12-001,XYG26845,INS-12-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim
+CLM-13-001,YZM71432,INS-13-01,Behavioral health services,2026-06-15,paid_closed,enterprise_revenue_cycle,BASELINE,synthetic control/investigation claim

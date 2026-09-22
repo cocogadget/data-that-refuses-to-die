@@ -1,0 +1,12 @@
+mrn,medication_id,medication_name,dose,status,status_date,notes
+TWQ58321,MED-15-OLD,Escitalopram,10 mg,discontinued,2025-09-20,historical medication tied to surviving claim
+TWQ58321,MED-15-CUR,Sertraline,50 mg,active,2025-09-20,replacement medication; refill portal encounter six months later
+ROW73158,MED-02-01,Methylphenidate,synthetic dose,active,,
+SPM46217,MED-03-01,Sertraline,synthetic dose,active,,
+URK29641,MED-05-01,Buspirone,synthetic dose,active,,
+VSW51382,MED-06-01,Bupropion,synthetic dose,active,,
+XUN35714,MED-08-01,Lamotrigine,synthetic dose,active,,
+YVG82163,MED-09-01,Hydroxyzine,PRN,active,,
+ZWL47590,MED-10-01,Atomoxetine,synthetic dose,active,,
+XYG26845,MED-12-01,Escitalopram,synthetic dose,active,,
+TYR63905,MED-14-01,Sertraline,synthetic dose,active,,

@@ -1,0 +1,17 @@
+mrn,encounter_id,encounter_date,encounter_type,provider,reason,summary,encounter_marker
+TWQ58321,ENC-15-01,2025-09-20,in_person,Nadia Reynolds,Medication management,Escitalopram discontinued; Sertraline 50 mg initiated,last_physically_seen
+TWQ58321,ENC-15-02,2026-03-20,portal,Nadia Reynolds,Medication refill,Portal interaction for Sertraline refill,last_encounter
+QNV18426,ENC-01-01,2026-06-15,in_person,Priya Vance,Behavioral health follow-up,Synthetic routine encounter,baseline
+ROW73158,ENC-02-01,2026-06-15,in_person,Omar Sutton,Behavioral health follow-up,Synthetic routine encounter,baseline
+SPM46217,ENC-03-01,2026-06-15,in_person,Nadia Reynolds,Behavioral health follow-up,Synthetic routine encounter,baseline
+TQX80534,ENC-04-01,2026-06-15,in_person,Omar Sutton,Behavioral health follow-up,Synthetic routine encounter,baseline
+URK29641,ENC-05-01,2026-06-15,in_person,Priya Vance,Behavioral health follow-up,Synthetic routine encounter,baseline
+VSW51382,ENC-06-01,2026-06-15,in_person,Nadia Reynolds,Behavioral health follow-up,Synthetic routine encounter,baseline
+WTL64029,ENC-07-01,2026-06-15,in_person,Omar Sutton,Behavioral health follow-up,Synthetic routine encounter,baseline
+XUN35714,ENC-08-01,2026-06-15,in_person,Priya Vance,Behavioral health follow-up,Synthetic routine encounter,baseline
+YVG82163,ENC-09-01,2026-06-15,in_person,Nadia Reynolds,Behavioral health follow-up,Synthetic routine encounter,baseline
+ZWL47590,ENC-10-01,2026-06-15,in_person,Omar Sutton,Behavioral health follow-up,Synthetic routine encounter,baseline
+TWE90316,ENC-11-01,2026-06-15,in_person,Priya Vance,Behavioral health follow-up,Synthetic routine encounter,baseline
+XYG26845,ENC-12-01,2026-06-15,in_person,Nadia Reynolds,Behavioral health follow-up,Synthetic routine encounter,baseline
+YZM71432,ENC-13-01,2026-06-15,in_person,Omar Sutton,Behavioral health follow-up,Synthetic routine encounter,baseline
+TYR63905,ENC-14-01,2026-06-15,in_person,Priya Vance,Behavioral health follow-up,Synthetic routine encounter,baseline

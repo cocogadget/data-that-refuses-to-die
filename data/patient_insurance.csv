@@ -1,0 +1,18 @@
+mrn,coverage_id,payer,plan_type,coverage_status,coverage_period,notes
+TWQ58321,BCNC-OLD-15,Blue Cross NC,Commercial,terminated,historical,coverage at old escitalopram claim
+TWQ58321,AET-MID-15,Aetna,Commercial,terminated,subsequent,second coverage
+TWQ58321,UHC-CUR-15,UnitedHealthcare,Commercial,active,current,current coverage
+TYR63905,UHC-CUR-14,UnitedHealthcare,Commercial,active,current,own account closed; guarantor relationship handled separately
+QNV18426,INS-01-01,Aetna,Commercial,active,current,synthetic baseline coverage
+ROW73158,INS-02-01,UnitedHealthcare,Commercial,active,current,synthetic baseline coverage
+SPM46217,INS-03-01,Blue Cross NC,Commercial,active,current,synthetic baseline coverage
+TQX80534,INS-04-01,Aetna,Commercial,active,current,synthetic baseline coverage
+URK29641,INS-05-01,UnitedHealthcare,Commercial,active,current,synthetic baseline coverage
+VSW51382,INS-06-01,Blue Cross NC,Commercial,active,current,synthetic baseline coverage
+WTL64029,INS-07-01,Aetna,Commercial,active,current,synthetic baseline coverage
+XUN35714,INS-08-01,UnitedHealthcare,Commercial,active,current,synthetic baseline coverage
+YVG82163,INS-09-01,Blue Cross NC,Commercial,active,current,synthetic baseline coverage
+ZWL47590,INS-10-01,Aetna,Commercial,active,current,synthetic baseline coverage
+TWE90316,INS-11-01,UnitedHealthcare,Commercial,active,current,synthetic baseline coverage
+XYG26845,INS-12-01,Blue Cross NC,Commercial,active,current,synthetic baseline coverage
+YZM71432,INS-13-01,Aetna,Commercial,active,current,synthetic baseline coverage
