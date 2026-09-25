@@ -31,6 +31,8 @@ def build_evidence_package(mrn):
 
     return evidence_package
 
-evidence_package = build_evidence_package(target_mrn)
-print(json.dumps(evidence_package, indent=2))
+
+if __name__ == "__main__":
+    evidence_package = build_evidence_package(target_mrn)
+    print(json.dumps(evidence_package, indent=2))
 
