@@ -22,11 +22,15 @@ evidence_files = [
 	"data/holds.csv",
 ]
 
-evidence_package = {}
+def build_evidence_package(mrn):
+    evidence_package = {}
 
-for filename in evidence_files:
-    records = find_records(filename, target_mrn)
-    evidence_package [filename] = records
+    for filename in evidence_files:
+        records = find_records(filename, mrn)
+        evidence_package[filename] = records
 
+    return evidence_package
+
+evidence_package = build_evidence_package(target_mrn)
 print(json.dumps(evidence_package, indent=2))
 
