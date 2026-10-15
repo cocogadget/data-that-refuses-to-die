@@ -1,0 +1,8 @@
+TEST CLAIM 1:
+The claim CLM-15-ESC-001 is dated 2025-03-20.
+
+TEST CLAIM 2:
+The claim CLM-15-ESC-001 is dated September 2020.
+
+TEST CLAIM 3:
+Blue Cross NC coverage was active on 2025-03-20 for patient TWQ58321.

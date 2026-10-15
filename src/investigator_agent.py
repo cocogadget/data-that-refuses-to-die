@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -54,10 +55,21 @@ UNRESOLVED QUESTIONS:
                 "role": "user",
                 "content": f"Analyze this evidence package:\n\n{evidence_json}",
             },
+
         ],
     )
 
     return response.choices[0].message.content
+
+def save_investigation_run(mrn, result):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"evaluation/investigator_run_{mrn}_{timestamp}.txt"
+
+    with open(filename, "w") as file:
+        file.write(result)
+
+ 
 if __name__ == "__main__":
     result = investigate_patient("TWQ58321")
     print(result)
+    save_investigation_run("TWQ58321", result)
