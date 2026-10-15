@@ -1,0 +1,41 @@
+
+
+**SURVIVING ARTIFACTS**  
+- **Historical claim** – `claim_id: CLM-15-ESC-001` is marked `ground_truth_state: SURVIVES` and resides in `current_location: enterprise_revenue_cycle`.  
+  *Source:* `data/historical_claims.csv`, record CLM‑15‑ESC‑001, fields `claim_id`, `ground_truth_state`, `current_location`.  
+
+*(No other records in the provided extracts carry an explicit “SURVIVES” flag.)*  
+
+---
+
+**TRACEABLE RELATIONSHIPS**  
+
+| Relationship | Evidence (source + record + fields) | Interpretation | Status |
+|--------------|--------------------------------------|----------------|--------|
+| Claim → Insurance coverage (historical) | `historical_claims.csv`: CLM‑15‑ESC‑001, `coverage_id: BCNC-OLD-15`  <br> `patient_insurance.csv`: mrn TWQ58321, `coverage_id: BCNC-OLD-15`, `coverage_status: terminated`, `coverage_period: historical` | The claim’s coverage identifier matches a terminated historical insurance record for the same MRN. | **CONFIRMED** (matching identifier) |
+| Claim → Medication (Escitalopram) | `historical_claims.csv`: CLM‑15‑ESC‑001, `claim_subject: Escitalopram 10 mg`  <br> `medications.csv`: MED‑15‑OLD, `medication_name: Escitalopram`, `dose: 10 mg`, `status: discontinued`, `status_date: 2025-09-20` | The claim’s subject exactly matches the name and dose of a medication record for the same MRN. | **CONFIRMED** (matching name + dose) |
+| Medication discontinuation → Encounter (medication change) | `medications.csv`: MED‑15‑OLD, `status_date: 2025-09-20`  <br> `encounters.csv`: ENC‑15‑01, `encounter_date: 2025-09-20`, `summary: Escitalopram discontinued; Sertraline 50 mg initiated` | Both records show the same date and describe escitalopram being stopped and sertraline started. | **CONFIRMED** (identical date & narrative) |
+| Encounter → Medication initiation (Sertraline) | `encounters.csv`: ENC‑15‑01, `summary: … Sertraline 50 mg initiated`  <br> `medications.csv`: MED‑15‑CUR, `medication_name: Sertraline`, `dose: 50 mg`, `status: active`, `status_date: 2025-09-20` | The encounter notes initiation of sertraline, which matches an active medication record with the same dose and start date. | **CONFIRMED** (matching drug, dose, date) |
+| Claim → Encounter (causal) | *Temporal check*: Claim date `2025-03-20` (historical_claims.csv) precedes encounter date `2025-09-20` (encounters.csv). | Because the claim occurs **before** the encounter, the encounter cannot have generated the claim. No explicit link states that an encounter created a claim. | **NOT ESTABLISHED** (chronology precludes causation) |
+| Claim → Hold (dependency) | `holds.csv`: HOLD‑15‑001, `mrn: TWQ58321`, `hold_status: active`, `scope: behavioral_health_records`  <br> `historical_claims.csv`: CLM‑15‑ESC‑001, `mrn: TWQ58321` | The hold and the claim share the same MRN, but the hold documentation does **not** tie the hold to the claim’s survival. | **INFERRED** (shared MRN only; no explicit linkage) |
+
+---
+
+**DOCUMENTED DEPENDENCIES OR HOLDS**  
+- **Hold HOLD‑15‑001** – active hold scoped to *behavioral_health_records* for MRN TWQ58321, with dashboard indicator *visible_lock*.  
+  *Source:* `data/holds.csv`, record HOLD‑15‑001, fields `hold_id`, `mrn`, `hold_status`, `scope`, `dashboard_indicator`, `evidence_note`.  
+  *Interpretation:* The hold is recorded, but its accompanying note states: *“existence of hold does not itself establish a legal retention requirement.”* No explicit connection is made between this hold and the surviving claim. Therefore, the hold provides **contextual evidence** only; a proven dependency on the claim’s survival cannot be claimed.
+
+---
+
+**UNRESOLVED LINEAGE GAPS**  
+1. **Retention mechanism for the claim** – While the claim is marked SURVIVES, no documented policy, hold, or rule is presented that explains why this specific paid‑closed claim remains in `enterprise_revenue_cycle` while other records may have been retired.  
+2. **Link between hold and claim** – The hold shares the MRN but lacks any explicit reference to the claim (e.g., claim‑specific hold identifier, retention notice, or legal basis). Without such a link, we cannot assert that the hold caused the claim’s persistence.  
+3. **Connection between insurance termination and claim survival** – The claim’s coverage (`BCNC-OLD-15`) is terminated, yet the claim survives. No evidence shows whether termination triggers retention, deletion, or archival rules applicable to this claim.  
+
+These gaps prevent a definitive lineage explanation for why the claim persists.
+
+---
+
+**CONCLUSION**  
+The only explicitly surviving artifact identified is the historical escitalopram claim (**CLM‑15‑ESC‑001**), which is confirmed to be linked—via matching identifiers—to a terminated historical insurance record, to the escitalopram medication record, and to a medication‑change encounter occurring six months later. An active behavioral‑health hold exists for the same patient, but the hold documentation does not establish a proven dependency on the claim’s survival. Consequently, while we can trace associative relationships (insurance, medication, encounter timing), the precise reason for the claim’s continued presence in the enterprise revenue cycle remains undocumented, leaving notable lineage gaps unresolved.
