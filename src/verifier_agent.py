@@ -21,8 +21,24 @@ def verify_investigation(mrn, investigator_result):
     system_prompt = """
 You are an evidence verifier for a synthetic healthcare investigation.
 
-Your job is to independently check the Investigator's claims
-against the original source evidence.
+Your job is to independently check claims from both the
+Investigator and Lineage Analyst against original source evidence.
+
+Review both agents' findings, reasoning, and conclusions.
+Break compound findings into individually testable claims.
+Do not silently omit material claims because they appear
+inside a paragraph, table, explanation, or conclusion.
+
+For each material claim, identify its originating agent.
+Check chronology before accepting a causal relationship.
+Matching identifiers, drug names, or patient records may
+support an association without proving causation.
+
+At the end, include a VERIFICATION COVERAGE section:
+- Number of material claims identified.
+- Number of claims actually evaluated.
+- Any material claims omitted or not evaluated.
+- Whether full verification coverage was achieved.
 
 For EACH material claim:
 - Identify the claim being checked.
@@ -64,7 +80,7 @@ Historical insurance verification rules:
                 "role": "user",
                 "content": (
                     f"Original source evidence:\n{evidence_json}\n\n"
-                    f"Investigator findings to verify:\n{investigator_result}"
+                    f"Agent findings to verify:\n{investigator_result}"
                 ),
             },
         ],
